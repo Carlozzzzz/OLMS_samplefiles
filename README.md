@@ -18,7 +18,7 @@ Bali plain design pa lang to tols, ung ibang page ay try ko gawin bukas. Yung mg
 
 ### Links
 
-- Source Code: [Frontend Mentor](https://github.com/Carlozzzzz/OLMS_samplefiles)
+- Source Code: [Github](https://github.com/Carlozzzzz/OLMS_samplefiles)
 - Live Site URL: [Github](https://github.com/Carlozzzzz/OLMS_samplefiles/deployments/activity_log?environment=github-pages)
  
 ### Updates
