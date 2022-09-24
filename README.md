@@ -19,7 +19,7 @@ Bali plain design pa lang to tols, ung ibang page ay try ko gawin bukas. Yung mg
 ### Links
 
 - Source Code: [Github](https://github.com/Carlozzzzz/OLMS_samplefiles)
-- Live Site URL: [Github](https://github.com/Carlozzzzz/OLMS_samplefiles/deployments/activity_log?environment=github-pages)
+- Live Site URL: [Github](https://carlozzzzz.github.io/OLMS_samplefiles/)
  
 ### Updates
 
