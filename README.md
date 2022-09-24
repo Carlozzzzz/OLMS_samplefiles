@@ -23,4 +23,4 @@ Bali plain design pa lang to tols, ung ibang page ay try ko gawin bukas. Yung mg
  
 ### Updates
 
-<!-- Changes and updates here -->
+**Changes and updates here**
