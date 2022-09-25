@@ -24,6 +24,11 @@ a {
 
 }
 
+#sidenav .dropdown .adminAvatar{
+   
+    margin: auto;
+}
+
 #sidenav a,
 #sidenav .icon {
     color: black;
@@ -54,7 +59,7 @@ a {
     padding-left: 30px !important;
 }
 
-#sidenav a:hover  {
+#sidenav .nav-a:hover  {
     background-color: #626262;
     color: white !important;
 }
