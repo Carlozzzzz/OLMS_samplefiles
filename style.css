@@ -21,6 +21,7 @@ a {
 #sidenav {
     min-height: 100vh;
     padding: 0;
+    background-color: white !important;
 
 }
 
@@ -28,6 +29,8 @@ a {
    
     margin: auto;
 }
+
+
 
 #sidenav a,
 #sidenav .icon {
@@ -60,14 +63,10 @@ a {
 }
 
 #sidenav .nav-a:hover  {
-    background-color: #626262;
+    background-color: #25C6DA;
     color: white !important;
+    transition: all 0.3s;
 }
-
-
-
-
-
 
 
 /* -------- End Sidenav-------- */
