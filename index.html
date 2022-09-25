@@ -9,7 +9,7 @@
     <!-- CSS Link/Custom -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/72c32f013b.js" crossorigin="anonymous"></script>
@@ -17,6 +17,98 @@
 </head>
 
 <body>
+
+    <!--### Modal ###-->
+
+    <!-- Add Academic -->
+    <div class="modal-add modal fade" id="addAcademic" tabindex="-1" aria-labelledby="AddAcademic" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAcademicTitle">Add Academic Year</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="txtStartDate" class="form-label">School Year</label>
+                            <div class="d-flex flex-row align-items-center">
+                                <!-- date -->
+
+                                <input type="datepicker" class="form-control w-25" id="txtStartDate"
+                                    aria-describedby="date">
+                                <p class="mx-2 my-auto"> to </p>
+                                <input type="datepicker" class="form-control w-25" id="txtDate" aria-describedby="date">
+                                <!-- date -->
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtStatus" class="form-label">Status</label>
+                            <select class="form-select" aria-label="Status">
+                                <option selected>Active</option>
+                                <option value="Inactive">Inactive</option>
+
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#successModal">Save</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Add Academic -->
+
+    <!-- Edit Academic -->
+    <div class="modal-add modal fade" id="editAcademic" tabindex="-1" aria-labelledby="EditAcademic" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAcademicTitle">Edit Academic Year</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="txtStartDate" class="form-label">School Year</label>
+                            <div class="d-flex flex-row align-items-center">
+                                <!-- date -->
+
+                                <input type="datepicker" class="form-control w-25" id="txtStartDate"
+                                    aria-describedby="date">
+                                <p class="mx-2 my-auto"> to </p>
+                                <input type="datepicker" class="form-control w-25" id="txtDate" aria-describedby="date">
+                                <!-- date -->
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtStatus" class="form-label">Status</label>
+                            <select class="form-select" aria-label="Status">
+                                <option selected>Active</option>
+                                <option value="Inactive">Inactive</option>
+
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="">Save</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Edit Academic -->
+
+    <!--### End Modal ###-->
+
+
     <div class="container-fluid">
         <div class="row ">
             <div class="top-col col-12">
@@ -57,11 +149,22 @@
         </div>
         <div class="row no-wrap ">
             <div class="sidenav col-lg-2 col-md-auto bg-light text-white " id="sidenav">
-                <a class="sidenav-logo " href="">OLMS</a>
+                <div class="dropdown d-flex flex-column text-center p-3">
+                    <img class="adminAvatar mt-3" src="image/hutaosmall.png" alt="hutao">
+                    <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin, <span>Hu</span>
+                    </a>
+                    <hr class="mb-0">
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-a dropdown-item" href="#">profile</a></li>
+                        <li><a class="nav-a dropdown-item" href="#">Another action</a></li>
+                        <li><a class="nav-a dropdown-item" href="#">Lagout</a></li>
+                    </ul>
+                </div>
                 <ul class="">
                     <li><a class="nav-a " href=""><i class="fa-solid fa-gauge icon"></i><span> Dashboard</span></a></li>
                     <li>
-                        <a class="" data-bs-toggle="collapse" href="#masterList" role="button" aria-expanded="false"
+                        <a class="nav-a" data-bs-toggle="collapse" href="#masterList" role="button" aria-expanded="false"
                             aria-controls="masterList">
                             <i class=" fa-solid fa-rectangle-list icon"></i><span> Master List</span>
                         </a>
@@ -76,11 +179,11 @@
                             </li>
                             <li><a class="nav-a ul-child" href=""><i class="fa-solid fa-user icon"></i><span>
                                         Parents</span></a></li>
-                            
+
                         </ul>
                     </li>
                     <li>
-                        <a class="" data-bs-toggle="collapse" href="#maitenanceList" role="button" aria-expanded="false"
+                        <a class="nav-a" data-bs-toggle="collapse" href="#maitenanceList" role="button" aria-expanded="false"
                             aria-controls="maitenanceList"><i class="fa-solid fa-toolbox icon"></i><span>
                                 Maitenance</span></a>
                         <ul class="dropdown-list collapse" id="maitenanceList">
@@ -104,17 +207,18 @@
 
             </div>
             <div class=" col-lg-10 p-3" id="main-content">
-                <h1 class="py-3">Academic Year
-
-                </h1>
+                <h1 class="py-3">Academic Year</h1>
                 <div class="card">
                     <div class="col-lg-4"></div>
                     <div class="col-lg-4"></div>
                     <div class="col-lg-4"></div>
                     <div class="card-header d-flex pb-0">
                         <p class="fs-4">Academic Year List lorem20</p>
-                        <div class="ms-auto"> 
-                            <button class="btn btn-primary btn-small me-2"><i class="fa-solid fa-plus"></i> Add New</button>
+                        <div class="ms-auto">
+                            <button class="btn btn-primary btn-small me-2" data-bs-toggle="modal"
+                                data-bs-target="#addAcademic">
+                                <i class="fa-solid fa-plus"></i> Add New
+                            </button>
                         </div>
                         <div class="input-group mb-3 w-25">
                             <input type="text" class="form-control " placeholder="Search"
@@ -123,7 +227,7 @@
                                     class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </div>
-                   
+
                     <div class="card-body pb-0">
                         <table class="table table-hover table-responsive">
                             <thead>
@@ -141,7 +245,8 @@
                                     <td>2020-2021</td>
                                     <td><span class="text-danger">Inactive</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -150,7 +255,8 @@
                                     <td>2021-2022</td>
                                     <td><span class="text-success">Active</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -159,7 +265,8 @@
                                     <td>2020-2021</td>
                                     <td><span class="text-danger">Inactive</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -168,7 +275,8 @@
                                     <td>2021-2022</td>
                                     <td><span class="text-success">Active</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -177,7 +285,8 @@
                                     <td>2020-2021</td>
                                     <td><span class="text-danger">Inactive</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -186,7 +295,8 @@
                                     <td>2021-2022</td>
                                     <td><span class="text-success">Active</span></td>
                                     <td>
-                                        <button class="btn btn-success">Edit</button>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#editAcademic">Edit</button>
                                         <button class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
@@ -215,7 +325,7 @@
                         <div class="card-text">
                             <p>Showing 1 of 2 entries</p>
                         </div>
-                        <div class="card-text ms-auto w-25">
+                        <div class="card-text ms-auto ">
                             <nav aria-label="pagination">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -257,7 +367,7 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script> -->
     <script>
-       
+
     </script>
 
 </body>
