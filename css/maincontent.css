@@ -1,0 +1,9 @@
+.set-width{
+    min-width: 200px;
+    max-width: 200px;
+    text-overflow: ellipsis !important;
+}
+
+.scrollable{
+    overflow: scroll;
+}
