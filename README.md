@@ -14,7 +14,7 @@
 
 Initial Files to be modified.
 
-Bali plain design pa lang to tols, ung ibang page ay try ko gawin bukas. Yung mga papalitan at mga pwede nating idagdag, makiki-message na lang sa messenger tol, or update mo na lang dito sa file na to. - [Update and changes](#updates)
+Uploaded new files. created and removed some parts on index file - [Update and changes](#updates)
 
 ### Links
 
