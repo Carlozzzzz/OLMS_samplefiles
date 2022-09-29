@@ -12,7 +12,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/maincontent.css" rel="stylesheet">
 
-
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/72c32f013b.js" crossorigin="anonymous"></script>
 
@@ -23,37 +22,16 @@
     <!--### Modal ###-->
 
     <!-- Add Academic -->
-    <div class="modal-add modal fade" id="addAcademic" tabindex="-1" aria-labelledby="AddAcademic" aria-hidden="true">
+    <div class="modal-add modal fade" id="addTeacher" tabindex="-1" aria-labelledby="AddTeacher"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addAcademicTitle">Add Academic Year</h5>
+                    <h5 class="modal-title" id="addTeacherTitle">Create Teacher</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="txtStartDate" class="form-label">School Year</label>
-                            <div class="d-flex flex-row align-items-center">
-                                <!-- date -->
-
-                                <input type="datepicker" class="form-control w-25" id="txtStartDate"
-                                    aria-describedby="date">
-                                <p class="mx-2 my-auto"> to </p>
-                                <input type="datepicker" class="form-control w-25" id="txtDate" aria-describedby="date">
-                                <!-- date -->
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtStatus" class="form-label">Status</label>
-                            <select class="form-select" aria-label="Status">
-                                <option selected>Active</option>
-                                <option value="Inactive">Inactive</option>
-
-                            </select>
-                        </div>
-
-                    </form>
+                   <h1>Edit me...</h1>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
@@ -66,41 +44,21 @@
     <!-- End Add Academic -->
 
     <!-- Edit Academic -->
-    <div class="modal-add modal fade" id="editAcademic" tabindex="-1" aria-labelledby="EditAcademic" aria-hidden="true">
+    <div class="modal-add modal fade" id="editTeacher" tabindex="-1" aria-labelledby="EditTeacher"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editAcademicTitle">Edit Academic Year</h5>
+                    <h5 class="modal-title" id="editTeacherTitle">Edit Teacher </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="txtStartDate" class="form-label">School Year</label>
-                            <div class="d-flex flex-row align-items-center">
-                                <!-- date -->
-
-                                <input type="datepicker" class="form-control w-25" id="txtStartDate"
-                                    aria-describedby="date">
-                                <p class="mx-2 my-auto"> to </p>
-                                <input type="datepicker" class="form-control w-25" id="txtDate" aria-describedby="date">
-                                <!-- date -->
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="txtStatus" class="form-label">Status</label>
-                            <select class="form-select" aria-label="Status">
-                                <option selected>Active</option>
-                                <option value="Inactive">Inactive</option>
-
-                            </select>
-                        </div>
-
-                    </form>
-                </div>
+                    <h1>Edit me...</h1>
+                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="">Save</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#successModal">save</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancel</button>
                 </div>
             </div>
         </div>
@@ -171,12 +129,15 @@
                             <i class=" fa-solid fa-rectangle-list icon"></i><span> Master List</span>
                         </a>
                         <ul class="dropdown-list collapse" id="masterList">
-                            <li><a class="nav-a ul-child" href="teacher.html"><i class="fa-solid fa-chalkboard-user icon"></i><span>
+                            <li><a class="nav-a ul-child" href="teacher.html"><i
+                                        class="fa-solid fa-chalkboard-user icon"></i><span>
                                         Teacher</a>
                             </li>
-                            <li><a class="nav-a ul-child" href="student.html"><i class="fa-solid fa-person icon"></i><span>
+                            <li><a class="nav-a ul-child" href="student.html"><i
+                                        class="fa-solid fa-person icon"></i><span>
                                         Student</span></a>
-                            <li><a class="nav-a ul-child" href="class.html"><i class="fa-solid fa-people-roof icon"></i></i><span>
+                            <li><a class="nav-a ul-child" href="class.html"><i
+                                        class="fa-solid fa-people-roof icon"></i></i><span>
                                         Class</a>
                             </li>
                             <li><a class="nav-a ul-child" href="parent.html"><i class="fa-solid fa-user icon"></i><span>
@@ -214,9 +175,125 @@
                 </ul>
 
             </div>
+            
             <div class=" col-lg-10 p-3" id="main-content">
                 <h2 class="py-3">Teacher</h2>
+                <div class="card">
 
+                    <div class="card-header d-flex align-items-center">
+                        <p class="fs-5 mb-0 ">Teacher List</p>
+                        <div class="ms-auto">
+                            <button class="btn btn-primary btn-small me-2" data-bs-toggle="modal"
+                                data-bs-target="#addTeacher">
+                                <i class="fa-solid fa-plus"></i> Add New
+                            </button>
+                        </div>
+                        <div class="input-group  w-25">
+                            <input type="text" class="form-control " placeholder="Search"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="card-body scrollable">
+                        <table class="table table-hover table-responsive">
+                            <tr>
+                                <!-- <th class=""></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th>
+                                <th class="set-width"></th> -->
+
+                            </tr>
+                            <thead>
+                                <tr>
+                                    <th class="" scope="col">#</th>
+                                    <th class="set-width table-column " scope="col">Picture</th>
+                                    <th class="set-width" scope="col">Teacher ID</th>
+                                    <th class="set-width" scope="col">Name</th>
+                                    <th class="set-width" scope="col">Birthdate</th>
+                                    <th class="set-width" scope="col">Gender</th>
+                                    <th class="set-width" scope="col">Email</th>
+                                    <th class="set-width" scope="col">Contact #</th>
+                                    <th class="set-width" scope="col">Address</th>
+                                    <th class="set-width" scope="col">Department</th>
+                                    <th class="set-width" scope="col">Status</th>
+                                    <th class="set-width" scope="col">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class="set-width">No image available.</td>
+                                    <td class="set-width">2090149548</td>
+                                    <td class="set-width">Benitez, Junita Banana P.</td>
+                                    <td class="set-width">2000/08/05</td>
+                                    <td class="set-width">Male</td>
+                                    <td class="set-width">juanitabana@gmail.com</td>
+                                    <td class="set-width">09123456789</td>
+                                    <td class="set-width">Momoland, Sta. Clara, Batangas</td>
+                                    <td class="set-width">IT</td>
+                                    <td class="set-width">Active</td>
+                                    <td class="set-width">
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#editTeacher">Edit</button>
+                                        <button class="btn btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td> No image available.</td>
+                                    <td>2090149548</td>
+                                    <td>Benitez, Junita Banana P.</td>
+                                    <td>2000/08/05</td>
+                                    <td>Male</td>
+                                    <td>juanitabanana@gmail.com</td>
+                                    <td>09123456789</td>
+                                    <td>Momoland, Sta. Clara, Batangas</td>
+                                    <td>IT</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                            data-bs-target="#editTeacher">Edit</button>
+                                        <button class="btn btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-body d-flex">
+                        <div class="card-text">
+                            <p>Showing 1 of 2 entries</p>
+                        </div>
+                        <div class="card-text ms-auto ">
+                            <nav aria-label="pagination">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <span class="page-link">Previous</span>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <span class="page-link">2</span>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
